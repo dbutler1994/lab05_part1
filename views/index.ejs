@@ -1,0 +1,36 @@
+   
+    <%- include("header") %>
+    
+      <main>
+        <!-- <div class="grid-row">
+          <div class="grid-item">
+            <%= mydata[0].title %>
+          </div>
+          <div class="grid-item">
+            <%= mydata[1].title %>
+          </div>
+          <div class="grid-item">
+            <%= mydata[2].title %>
+          </div>
+          <div class="grid-item">
+            <%= mydata[3].title %>
+          </div>
+        </div> -->
+
+        <div class="grid-row">
+            <% mydata.forEach(toy => { %>
+                <div class="grid-item">
+                    <%= toy.title.slice(0,30) %>
+                    <div class="b"><a class="buyLink" href=<%= toy.url %> target="_blank">
+                        <span>BUY</span>
+                    </a></div>
+                </div>
+            
+            <% }); %>
+        </div>
+
+
+
+      </main>
+    
+<%- include("footer") %>
